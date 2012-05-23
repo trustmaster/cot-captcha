@@ -8,7 +8,7 @@ Tags=comments.tpl:{COMMENTS_FORM_VERIFY_IMG},{COMMENTS_FORM_VERIFY}
 
 defined('COT_CODE') or die("Wrong URL.");
 
-if ($usr['id'] == '0')
+if ($usr['id'] == '0' && $cfg['captchamain'] == 'captcha')
 {
 	$t->assign(array(
 		'COMMENTS_FORM_VERIFYIMG' => cot_captcha_generate(),
